@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ultimate Valentine ❤️</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Floating hearts background -->
+<div class="hearts"></div>
+
+<!-- PAGE 1: Typewriter Intro -->
+<section id="intro" class="active">
+    <h1 class="typewriter" id="typeText"></h1>
+    <button class="btn" onclick="nextPage()">Let Me See ❤️</button>
+</section>
+
+<!-- PAGE 2: Cute Cat -->
+<section id="catSection">
+    <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" class="cat" alt="Cute cat GIF">
+    <h2>Hey you… want to see something special? 😸</h2>
+    <button class="btn" onclick="nextPageGift()">Show Me 🎁</button>
+</section>
+
+<!-- PAGE 3: Gift Box -->
+<section id="giftSection">
+    <h2>Cut the gift to open it 🎁✂️</h2>
+    <div class="gift" onclick="openGift()">
+        <div class="lid"></div>
+        <div class="box"></div>
+    </div>
+</section>
+
+<!-- PAGE 4: Ring + Song -->
+<section id="finalSection">
+    <div class="ring">💍</div>
+    <h2 class="glowText">Will You Be Mine Forever?</h2>
+    <button class="btn" onclick="playMusic()">Play Our Song 🎵</button>
+</section>
+
+<audio id="bgMusic" src="mysong.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
