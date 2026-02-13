@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff4e50, #fc913a);
+    overflow: hidden;
+    text-align: center;
+    color: white;
+}
+
+/* Sections */
+section {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+section.active { display: flex; }
+
+/* Buttons */
+.btn {
+    padding: 15px 40px;
+    border-radius: 40px;
+    border: none;
+    background: hotpink;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+.btn:hover { transform: scale(1.1); box-shadow: 0 0 20px hotpink; }
+
+/* Typewriter */
+.typewriter { font-size: 2em; }
+
+/* Cat */
+.cat {
+    width: 200px;
+    border-radius: 20px;
+    animation: float 3s infinite ease-in-out;
+}
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Gift 3D */
+.gift { position: relative; width:150px; height:150px; cursor:pointer; transform-style: preserve-3d; transition:1s; }
+.lid { width:150px; height:50px; background: crimson; position:absolute; top:0; }
+.box { width:150px; height:100px; background:red; position:absolute; bottom:0; }
+.gift.open { transform: rotateX(180deg); }
+
+/* Ring */
+.ring { font-size: 100px; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100% {transform: scale(1);} 50% {transform: scale(1.3);} }
+.glowText { animation: glow 2s infinite alternate; }
+@keyframes glow { from {text-shadow:0 0 10px pink;} to {text-shadow:0 0 40px hotpink;} }
+
+/* Floating hearts */
+.hearts::before {
+    content: "❤️ 💖 💕 💘 💝";
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    font-size: 40px;
+    animation: rise 15s linear infinite;
+}
+@keyframes rise { from {top:100%;} to {top:-100%;} }
